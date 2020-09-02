@@ -1,0 +1,44 @@
+nmap Scanning Commands of Nmap:-
+1. Nmap ip of the terget.
+
+2. Nmap -p 1-1000(Port no range) ip of the taget.
+
+3. Nmap -p 80 (HTTP port scanning) ip range of the net work like
+   Nmap -p 80 192.168.10.*
+
+4. Nmap -p 80 ip range -oG path where you want to save the scanning result. Like:-
+
+   Nmap -p 80 192.168.10.* -oG /temp/nmap-targethost.txt
+
+5. Stealth Scanning in Nmap
+   Nmap -sS ip of the target
+   Nmap -sS ip of the terget and -p port number
+
+6. OS Fingerprinting with nmap.
+
+  (i) nmap -O ip of the target
+ (ii) nmap -sV ip of the target
+(iii) amap -bq ip of the target 1-100
+
+-------------- Zenmap ------------
+
+1- In cmd field, type nmap -O <IP Range>
+   Exp- nmap -O 192.168.10.*   
+
+2- In cmd field, type nmap --packet-trace <target ip Add> 
+	Exp- nmap --packet-trace 192.168.10.10
+
+
+======== HPING3 ===========
+
+1- hping3 -c 3 <Target IP add> (for packet checking)
+
+2- hping3 --scan port range -S <Target IP Add> (For port scan and syn flag)
+
+3- hping3 <target IP> --udp --rand-source --data 500 and press Enter  (For UDP packet crafting)
+
+4- hping3 -S <Target IP> -p 80 -c 5 (For TCP SYN)
+
+5- hpin3 <Target IP> --flood  (To Flood TCP Packets) 
+
+
